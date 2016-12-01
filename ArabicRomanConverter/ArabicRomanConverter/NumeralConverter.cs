@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ArabicRomanConverter
 {
@@ -20,9 +21,58 @@ namespace ArabicRomanConverter
     /// </summary>
     public class NumeralConverter
     {
-        public int ToArabic(string s)
+        private readonly Dictionary<char, int> _dic = new Dictionary<char, int>
         {
-            throw new NotImplementedException();
+            {'I', 1 },
+            {'V', 5 },
+            {'X', 10 },
+            {'L', 50 },
+            {'C', 100 },
+            {'M', 500 },
+            {'M', 1000 },
+        };
+
+        public int ToArabic(string romanNumeral)
+        {
+            char[] characters = romanNumeral.ToCharArray();
+
+            foreach (char c in characters)
+            {
+                if (!_dic.ContainsKey(c))
+                    throw new ArgumentException($"Invalid character in input {c}");
+
+            }
+
+
+            if (characters.Length == 3 && characters[0] == 'I' && characters[1] == 'I' && characters[2] != 'I')
+            {
+                throw new ArgumentException("Illeggal format");
+            }
+
+            if (string.IsNullOrEmpty(romanNumeral))
+            {
+                return 0;
+            }
+
+            var sum = _dic[characters[characters.Length - 1]];
+
+            int previousInt = sum;
+            for (int i = characters.Length - 2; i >= 0; i--)
+            {
+                var currentInt = _dic[characters[i]];
+                if (previousInt <= currentInt)
+                {
+
+                    sum += currentInt;
+                }
+                else
+                {
+                    sum -= currentInt;
+                }
+                previousInt = currentInt;
+            }
+
+            return sum;
         }
     }
 }
