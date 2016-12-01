@@ -28,8 +28,8 @@ namespace ArabicRomanConverter
             {'X', 10 },
             {'L', 50 },
             {'C', 100 },
-            {'M', 500 },
-            {'M', 1000 },
+            {'D', 500 },
+            {'M', 1000 }
         };
 
         public int ToArabic(string romanNumeral)

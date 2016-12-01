@@ -113,5 +113,23 @@ namespace ArabicRomanConverterTest
 
             Assert.AreEqual(48, actual);
         }
+
+        [TestMethod]
+        public void ToArabic_return_2016_when_MMXVI()
+        {
+            NumeralConverter target = new NumeralConverter();
+            int actual = target.ToArabic("MMXVI");
+
+            Assert.AreEqual(2016, actual);
+        }
+
+        [TestMethod]
+        public void ToArabic_return_3888_when_MMMDCCCLXXXVIII()
+        {
+            NumeralConverter target = new NumeralConverter();
+            int actual = target.ToArabic("MMMDCCCLXXXVIII");
+
+            Assert.AreEqual(3888, actual);
+        }
     }
 }
