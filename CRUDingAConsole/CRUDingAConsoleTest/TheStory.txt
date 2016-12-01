@@ -1,0 +1,15 @@
+﻿All guys are good and bad.
+They have a Goodness between 1 and 10 and they have a Badness between 1 and 10.
+This is hidden.
+When a guy has more Goodness than Badness, he is good.
+When a guy has more Badness than Goodness, he is bad.
+When a guy has equal Badness than Goodness, he is politician.
+When a guy helps someone, his goodness increases.
+When a guy refuses to help someone, his Goodness decreases, and Badness increases.
+When a guy dies, he is lost.
+
+Case 1: 
+Donald Trump is bad guy. Turn him into a good guy.
+
+Case 2:
+Bernie Sanders is a good guy. Make him a politician.
