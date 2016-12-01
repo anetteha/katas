@@ -46,8 +46,8 @@ namespace ArabicRomanConverterTest
         [TestMethod]
         public void ToArabic_return_6_when_VI()
         {
-            NumeralConverter target = new NumeralConverter();
-            int actual = target.ToArabic("VI");
+            var target = new NumeralConverter();
+            var actual = target.ToArabic("VI");
 
             Assert.AreEqual(6, actual);
         }
@@ -56,8 +56,8 @@ namespace ArabicRomanConverterTest
         [TestMethod]
         public void ToArabic_return_2_when_II()
         {
-            NumeralConverter target = new NumeralConverter();
-            int actual = target.ToArabic("II");
+            var target = new NumeralConverter();
+            var actual = target.ToArabic("II");
 
             Assert.AreEqual(2, actual);
         }
@@ -65,8 +65,8 @@ namespace ArabicRomanConverterTest
         [TestMethod]
         public void ToArabic_return_9_when_IX()
         {
-            NumeralConverter target = new NumeralConverter();
-            int actual = target.ToArabic("IX");
+            var target = new NumeralConverter();
+            var actual = target.ToArabic("IX");
 
             Assert.AreEqual(9, actual);
         }
@@ -74,8 +74,8 @@ namespace ArabicRomanConverterTest
         [TestMethod]
         public void ToArabic_return_8_when_VIII()
         {
-            NumeralConverter target = new NumeralConverter();
-            int actual = target.ToArabic("VIII");
+            var target = new NumeralConverter();
+            var actual = target.ToArabic("VIII");
 
             Assert.AreEqual(8, actual);
         }
@@ -84,7 +84,7 @@ namespace ArabicRomanConverterTest
         [ExpectedException(typeof(ArgumentException))]
         public void ToArabic_throws_exception_when_InvalidCharater()
         {
-            NumeralConverter target = new NumeralConverter();
+            var target = new NumeralConverter();
             target.ToArabic("S");            
         }
 
@@ -92,15 +92,15 @@ namespace ArabicRomanConverterTest
         [ExpectedException(typeof(ArgumentException))]
         public void ToArabic_throws_exception_when_InvalidFormat()
         {
-            NumeralConverter target = new NumeralConverter();
-            int actual = target.ToArabic("IIX");
+            var target = new NumeralConverter();
+            target.ToArabic("IIX");
         }
         
         [TestMethod]
         public void ToArabic_return_50_when_L()
         {
-            NumeralConverter target = new NumeralConverter();
-            int actual = target.ToArabic("L");
+            var target = new NumeralConverter();
+            var actual = target.ToArabic("L");
 
             Assert.AreEqual(50, actual);
         }
@@ -108,8 +108,8 @@ namespace ArabicRomanConverterTest
         [TestMethod]
         public void ToArabic_return_48_when_XLVIII()
         {
-            NumeralConverter target = new NumeralConverter();
-            int actual = target.ToArabic("XLVIII");
+            var target = new NumeralConverter();
+            var actual = target.ToArabic("XLVIII");
 
             Assert.AreEqual(48, actual);
         }
@@ -117,8 +117,8 @@ namespace ArabicRomanConverterTest
         [TestMethod]
         public void ToArabic_return_2016_when_MMXVI()
         {
-            NumeralConverter target = new NumeralConverter();
-            int actual = target.ToArabic("MMXVI");
+            var target = new NumeralConverter();
+            var actual = target.ToArabic("MMXVI");
 
             Assert.AreEqual(2016, actual);
         }
@@ -126,8 +126,8 @@ namespace ArabicRomanConverterTest
         [TestMethod]
         public void ToArabic_return_3888_when_MMMDCCCLXXXVIII()
         {
-            NumeralConverter target = new NumeralConverter();
-            int actual = target.ToArabic("MMMDCCCLXXXVIII");
+            var target = new NumeralConverter();
+            var actual = target.ToArabic("MMMDCCCLXXXVIII");
 
             Assert.AreEqual(3888, actual);
         }

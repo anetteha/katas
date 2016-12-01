@@ -34,15 +34,13 @@ namespace ArabicRomanConverter
 
         public int ToArabic(string romanNumeral)
         {
-            char[] characters = romanNumeral.ToCharArray();
+            var characters = romanNumeral.ToCharArray();
 
-            foreach (char c in characters)
+            foreach (var c in characters)
             {
                 if (!_dic.ContainsKey(c))
                     throw new ArgumentException($"Invalid character in input {c}");
-
             }
-
 
             if (characters.Length == 3 && characters[0] == 'I' && characters[1] == 'I' && characters[2] != 'I')
             {
@@ -55,20 +53,19 @@ namespace ArabicRomanConverter
             }
 
             var sum = _dic[characters[characters.Length - 1]];
-
-            int previousInt = sum;
-            for (int i = characters.Length - 2; i >= 0; i--)
+            var previousInt = sum;
+            for (var i = characters.Length - 2; i >= 0; i--)
             {
                 var currentInt = _dic[characters[i]];
                 if (previousInt <= currentInt)
                 {
-
                     sum += currentInt;
                 }
                 else
                 {
                     sum -= currentInt;
                 }
+
                 previousInt = currentInt;
             }
 
