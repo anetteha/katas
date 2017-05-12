@@ -1,0 +1,36 @@
+﻿Problembeskrivelse:
+Din jobb er å sammenligne pokerhender, og avgjøre om det er en vinner.
+
+Regler:
+En kortstokk består av 52 kort, fordelt på fire farger - spar, kløver, hjerter og ruter. (Angitt som S, K, H og R i inputdataene.)
+Hvert kort har en verdi; 2, 3, 4, 5, 6, 7, 8, 9, 10, Knekt(Kn), Dronning(D), Konge(K), Ess(E)
+2 er laveste, og E er høyeste verdi.
+
+En pokerhånd består av 5 kort, delt fra kortstokken. 
+
+Hendene rangeres på følgende måte:
+Straight flush: 5 kort i samme farge i rekkefølge. Vurderes på høyeste kortet i rekken.
+Fire like: 4 kort med samme verdi. Vurderes på verdien av kortet.
+Fult hus: 3 like og et par. Vurderes på verdien av de tre like.
+Flush: 5 kort i samme farge. Hvis to har flush, avgjøres det på høyeste kort.
+Tre like: 3 kort med samme verdi. Hvis to har tre like, avgjøres det på verdien av de tre kortene.
+To par: Hånden har to ulike par. Vurderes på det høeste paret. Dersom de høyeste parene er like, vurderes versien på det lave paret. Dersom  begge parene er like, avgjøres det på høyeste kort.
+Et par: 2 av 5 kort har samme verdi. Dersom hendene har like par, avgjøres det på høyeste kort.
+Høyeste kort: Høyeste kortet vinner.
+
+Eksempelinput:
+
+Sort: 2H 3R 5S 9K KD  Hvit: 2K 3H 4S 8K AH
+Sort: 2H 4S 4K 2R 4H  Hvit: 2S 8S AS DS 3S
+Sort: 2H 3R 5S 9K KD  Hvit: 2K 3H 4S 8K KH
+Sort: 2H 3R 5S 9R KD  Hvit: 2R 3H 5K 9S KH
+Hver rad viser to spillere. En spiller som heter "Sort" og en som heter "Hvit".
+
+
+Eksempeloutput:
+
+Hvit vinner. - med høyeste kort: Ess
+Sort vinner. - med fult hus: 4 over 2 
+Sort vinner. - med høyeste kort: Konge
+Uavgjort.
+
