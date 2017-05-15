@@ -29,8 +29,8 @@ Hver rad viser to spillere. En spiller som heter "Sort" og en som heter "Hvit".
 
 Eksempeloutput:
 
-Hvit vinner. - med høyeste kort: Ess
-Sort vinner. - med fult hus: 4 over 2 
-Sort vinner. - med høyeste kort: Konge
-Uavgjort.
+Hvit vinner - med høyeste kort: Ess
+Sort vinner - med fult hus: 4 over 2 
+Sort vinner - med høyeste kort: Konge
+Uavgjort
 
